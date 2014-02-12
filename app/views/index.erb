@@ -1,0 +1,27 @@
+<div class="container">
+<h1><a href="/" id="title">AdventureTweet</a></h1>
+  <div class="get_username">
+    <form action="/get_user_tweets" method='post' id="adventure_form">
+      <input type="text" name="username" placeholder="Enter a Twitter username" autofocus>
+      <input type="submit" value="Get tweets">
+    </form>
+    <img src="/spinner.gif" class="spinner hide">
+  </div>
+
+
+
+  <div class="tweets">Replace this with partially rendered HTML</div>
+
+
+  <% if @tweets %>
+  <table>
+    <% @tweets.each_with_index do |tweet, index| %>
+    <tr>
+      <td id="number"><%= index %></td>
+      <td><%= tweet.text %><br><div id="time"><%= tweet.created_at %><</td>
+    </tr>
+    <% end %>
+  </table>
+  <% end %>
+
+</div>

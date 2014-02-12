@@ -1,0 +1,100 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  /*background-color: #ffcc00;*/
+  background: #fcb61a url('/jake_face.jpeg') no-repeat right top;
+  background-size: 40%;
+/*  background-position: right top;*/
+}
+
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  /*border: 1px dotted black;*/
+}
+th {
+  text-align: left;
+}
+
+.footer {
+  margin: 20px auto;
+  width: 600px;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: brown;
+}
+.footer a:hover {
+  color: red;
+}
+
+tr {
+  border-top: 1px solid rgba(230,140,80,0.5);
+}
+
+td {
+  padding: 10px;
+}
+
+h1 {
+  color: darkred;
+  font-size: 42pt;
+  font-weight: 900;
+  letter-spacing: -3px;
+  margin: 0;
+  text-shadow: 1px 1px 5px white;
+}
+
+h2 {
+  font-size: 24pt;
+  font-weight: 100;
+  margin: 0;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px white;
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 100;
+  color: dimgray;
+  margin-bottom: 10px;
+}
+
+#number {
+  color: #FF6600;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 50px;
+  padding: 0px 15px 0px 0px;
+  text-align: right;
+}
+
+#title {
+  text-decoration: none;
+  color: darkred;
+}
+
+.spinner {
+  padding: 10px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#time {
+  text-align: right;
+  color: darkred;
+  font-size: 10px;
+  opacity: 0.5;
+}

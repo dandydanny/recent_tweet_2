@@ -1,0 +1,59 @@
+Notes:
+
+Helpful rake console commands for testing:
+
+user = TwitterUser.last
+record = user.tweets.first
+record.is_stale?
+
+
+--------------
+Code used to live in Controller, now broken out into appropriate models
+
+ # @tweets = []
+  # if user = local_user?(params[:username]) # Checks whether a user is in the DB
+  #   puts "=================== User found in DB ============================"
+  #   # If user is in the database, check tweets are stale or not
+  #   latest_tweet_db = user.tweets.first
+  #     if latest_tweet_db.is_stale?
+  #       # if stale, delete old tweets in DB and populate with latest tweets
+  #       user.tweets.destroy_all
+  #       user_timeline = get_user_timeline_tweets(params[:username])
+  #       user_timeline.each do |tweet|
+  #         user.tweets.create(text: tweet.text,
+  #                            twitter_time: tweet.created_at)
+  #         @tweets << tweet
+  #       end # end of loop
+  #     else
+  #       # if not stale, load from DB
+  #       user.tweets.limit(10).each do |tweet|
+  #         @tweets << tweet
+  #       end
+  #     end
+  #   @tweets
+  # else
+
+  #   puts "=================== User not in DB ============================"
+  #   # user = get_user_timeline_tweets(params[:username])
+  #   # redirect("/error") if user.nil?
+  #   # Come back to change the error page!!!!!!!!!!!!!!!!!!!!!!
+
+  #   # Get user timeline
+  #   # User exists: get an array of tweet obj
+  #   # User doesn't exist: get error
+  #   if user_timeline = get_user_timeline_tweets(params[:username]) # Checks whether user exists in Twitterverse
+  #     puts "=================== User is in Twitterverse ============================"
+  #     user = TwitterUser.create(username: params[:username])
+  #     user_timeline.each do |tweet|
+  #       user.tweets.create(text: tweet.text,
+  #                          twitter_time: tweet.created_at)
+  #       @tweets << tweet
+  #     end
+  #     @tweets
+  #   else
+  #     puts "=================== User not in Twitterverse ============================"
+  #   end
+
+  # end
+  -------------------------------------------------------------------------------
+

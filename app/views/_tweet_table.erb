@@ -1,0 +1,11 @@
+  <% if @tweets %>
+    <h2><%= @username %>'s recent tweets:</h2>
+    <table>
+      <% @tweets.each_with_index do |tweet, index| %>
+      <tr>
+        <td id="number"><%= index + 1 %></td>
+        <td id="tweet"><%= tweet.text %><br><div id="time"><%= tweet.created_at %><div></td>
+      </tr>
+      <% end %>
+    </table>
+  <% end %>
