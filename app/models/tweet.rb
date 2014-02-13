@@ -12,12 +12,12 @@ class Tweet < ActiveRecord::Base
     # Don't attempt compare the time difference between two tweets if
     # user only has one tweet.
 
-    puts "==================================="
+    puts "============== running average_Tweet_time ====================="
     puts self.id
     puts self.id + 1
     latest = Tweet.find(self.id).twitter_time
     previous = Tweet.find(self.id + 1).twitter_time
-    puts "========== difference ============ "
+    puts "=========================== difference ======================== "
     # calculate and return time difference
     puts "Latest: " + latest.to_s
     puts "Previous: " + previous.to_s
@@ -27,13 +27,13 @@ class Tweet < ActiveRecord::Base
   end
 
   def is_stale?
-    puts "============== running is_stale? method ==============="
+    puts "============== running is_stale? method ========================="
     time_inactive = inactive_time_from_last_tweet
     if time_inactive > average_tweet_time
-      puts "============= local tweet records are stale ===================="
+      puts "=============is_stale says local is stale ===================="
       true
     else
-      puts "============= local tweet records are fresh ===================="
+      puts "============= is_stale says local is fresh ===================="
       false
     end
   end

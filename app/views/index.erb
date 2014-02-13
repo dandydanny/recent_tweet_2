@@ -1,27 +1,18 @@
 <div class="container">
 <h1><a href="/" id="title">AdventureTweet</a></h1>
   <div class="get_username">
-    <form action="/get_user_tweets" method='post' id="adventure_form">
-      <input type="text" name="username" placeholder="Enter a Twitter username" autofocus>
-      <input type="submit" value="Get tweets">
+    <form action="/get_user_tweets" method="POST" class="input_form">
+      <input class="input" type="text" name="username" placeholder="Enter a Twitter username" autofocus>
+      <button class="input" id="get_tweet">Get Tweet <i class="fa fa-twitter"></i></button>
+      <img src="/spinner.gif" class="spinner hide">
     </form>
-    <img src="/spinner.gif" class="spinner hide">
   </div>
 
+  <i class="fa fa-twitter fa_bg center"></i>
+  <i class="fa fa-spinner fa-spin center hide"></i>
 
-
-  <div class="tweets">Replace this with partially rendered HTML</div>
-
-
-  <% if @tweets %>
-  <table>
-    <% @tweets.each_with_index do |tweet, index| %>
-    <tr>
-      <td id="number"><%= index %></td>
-      <td><%= tweet.text %><br><div id="time"><%= tweet.created_at %><</td>
-    </tr>
-    <% end %>
-  </table>
-  <% end %>
+  <div class="tweets">
+    <p>Enter a twitter user's Twitter handle to see a list of 10 most recent tweets.</p>
+  </div>
 
 </div>
