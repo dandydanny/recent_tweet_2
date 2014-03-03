@@ -1,0 +1,10 @@
+# Remove sensitive info that was accidently pushed.
+# See https://help.github.com/articles/remove-sensitive-data
+
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch config/yml_file.yml' --prune-empty --tag-name-filter cat -- --all
+
+git push origin master --force
+
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch config/twitter_keys.yml' --prune-empty --tag-name-filter cat -- --all
+
+git push origin master --force
