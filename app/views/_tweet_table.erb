@@ -4,7 +4,7 @@
   <% @tweets.each_with_index do |tweet, index| %>
   <tr>
     <td id="number"><%= index + 1 %></td>
-    <td id="tweet"><%= tweet.text %><br><div id="time"><%= tweet.created_at %><div></td>
+    <td id="tweet"><%= tweet.text %><br><div id="time"><%= tweet.twitter_time %><div></td>
   </tr>
   <% end %>
 </table>
