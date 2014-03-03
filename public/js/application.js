@@ -22,8 +22,6 @@ $(document).ready(function() {
         $(".fa-spin").addClass("hide");
         $('.input').removeAttr('disabled');
         $(".tweets").html(response);
-        // refactor this to not do redirect
-        // window.location.href = '/' + data;
       }
     });
   });

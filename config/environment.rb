@@ -26,8 +26,9 @@ require 'twitter'
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
-env_config = YAML.load_file(APP_ROOT.join('config', 'yml_file.yml'))
+env_config = YAML.load_file(APP_ROOT.join('config', 'twitter_keys.yml'))
 
+# Stuffing
 env_config.each do |key, value|
   ENV[key] = value
 end

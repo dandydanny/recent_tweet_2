@@ -30,7 +30,7 @@ class Tweet < ActiveRecord::Base
     puts "============== running is_stale? method ========================="
     time_inactive = inactive_time_from_last_tweet
     if time_inactive > average_tweet_time
-      puts "=============is_stale says local is stale ===================="
+      puts "============= is_stale says local is stale ===================="
       true
     else
       puts "============= is_stale says local is fresh ===================="
