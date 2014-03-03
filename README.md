@@ -8,10 +8,12 @@ If tweets are not yet stale, load from local DB instead.
 
 Running on local machine:
 
-After cloning the repo, create twitter_keys.yml file inside /config
+After cloning the repo, create twitter_keys.yml file inside /config directory, and supply the necessary keys.
 
 TWITTER_KEY:
 TWITTER_SECRET:
 
 OAUTH_TOKEN:
 OAUTH_TOKEN_SECRET:
+
+Alternately, expand encrypted key file into the /config directory.
