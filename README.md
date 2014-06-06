@@ -1,5 +1,7 @@
 #AdventureTweet
 
+![AdventureTweet. Mathmatical!](http://i29.photobucket.com/albums/c259/dandydanny/DBC/adventuretweet_zpsef03170c.png)
+
 Fetches an entered Twitter user's 10 most recent tweets.
 AJAX. Older non-AJAX route also available.
 If tweets are not yet stale, load from local DB instead.
