@@ -27,6 +27,7 @@ To start the server:
 ```
 shotgun
 ```
+Check out project at localhost:9393
 
 ## Contributing
 1. Fork it
